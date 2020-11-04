@@ -15,7 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -25,13 +24,14 @@ SECRET_KEY = '$m3hk=h*zua2%qmt&hgx8ljrx%xkh&3-01@0yf$49a1ndfl5r4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
 
 INSTALLED_APPS = [
     'hackback.apps.HackbackConfig',
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -71,7 +72,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'HackathonDjango.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -79,25 +79,24 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         "CLIENT": {
-           "name": "test2",
-           "host": "mongodb+srv://web:junction2020web@demodb.zremu.mongodb.net/test2?retryWrites=true&w=majority",
-           "username": "web",
-           "password": "junction2020web",
-           "authMechanism": "SCRAM-SHA-1",
+            "name": "test2",
+            "host": "mongodb+srv://web:junction2020web@demodb.zremu.mongodb.net/test2?retryWrites=true&w=majority",
+            "username": "web",
+            "password": "junction2020web",
+            "authMechanism": "SCRAM-SHA-1",
         },
     },
     'rest': {
         'ENGINE': 'djongo',
         "CLIENT": {
-           "name": "sample_restaurants",
-           "host": "mongodb+srv://web:junction2020web@demodb.zremu.mongodb.net/sample_restaurants?retryWrites=true&w=majority",
-           "username": "web",
-           "password": "junction2020web",
-           "authMechanism": "SCRAM-SHA-1",
+            "name": "sample_restaurants",
+            "host": "mongodb+srv://web:junction2020web@demodb.zremu.mongodb.net/sample_restaurants?retryWrites=true&w=majority",
+            "username": "web",
+            "password": "junction2020web",
+            "authMechanism": "SCRAM-SHA-1",
         },
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -117,7 +116,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -130,7 +128,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
