@@ -7,15 +7,25 @@ def index(request):
     return HttpResponse("Hello, welcome in our Junction backend system.")
 
 
+# def restaurants(request, number):
+#     maxi = Restaurant.objects.exclude(name__exact="").count()
+#     if number > maxi:
+#         return HttpResponse("There are no such many restaurants.")
+#     else:
+#         list_of_restaurants = Restaurant.objects.exclude(name__exact="").order_by('name')[:number]
+#         output = "<b>Alphabetically {} first restaurants:<br></b>".format(min(number, maxi))
+#         output += '<br>'.join([q.name for q in list_of_restaurants])
+#         return HttpResponse(output)
+
+
 def restaurants(request, number):
     maxi = Restaurant.objects.exclude(name__exact="").count()
     if number > maxi:
-        return HttpResponse("There are no such many restaurants.")
+        data = serializers.serialize("json", {})
     else:
         list_of_restaurants = Restaurant.objects.exclude(name__exact="").order_by('name')[:number]
-        output = "<b>Alphabetically {} first restaurants:<br></b>".format(min(number, maxi))
-        output += '<br>'.join([q.name for q in list_of_restaurants])
-        return HttpResponse(output)
+        data = serializers.serialize("json", list_of_restaurants)
+    return JsonResponse(data, safe=False)
 
 
 def restaurants_json(request):
