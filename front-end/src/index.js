@@ -1,5 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import styled from 'styled-components';
 
-ReactDOM.render(<h1>React app</h1>, document.getElementById('root'));
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import Dashboard from './pages/Dashboard';
+import Sidebar from './components/Sidebar';
+
+const Container = styled.div`
+	display: flex;
+	flex-wrap: nowrap;
+`;
+
+ReactDOM.render(
+	<Router>
+		<Header />
+		<Container>
+			<Sidebar />
+			<Dashboard />
+		</Container>
+	</Router>,
+	document.getElementById('root')
+);
