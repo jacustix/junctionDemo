@@ -17,4 +17,6 @@ body {
 	--light-bg-color: #2a3a47;
 	--light-blue-color: #61dbfb;
 	--color-transition: color 0.3s;
+
+	--box-shadow: 3px 3px 16px black;
 }

@@ -10,6 +10,9 @@ export const COLUMNS = [
 	{
 		Header: 'Last name',
 		accessor: 'last_name',
+		Cell: ({ value }) => {
+			return <span>{value}</span>;
+		},
 	},
 	{
 		Header: 'Email',

@@ -1,19 +1,27 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import styled from 'styled-components';
 
 import TableData from '../components/TableData';
+import LineChartComponent from '../components/Charts/LineChartComponent';
+import BarChartComponent from '../components/Charts/BarChartComponent';
 
 function Dashboard() {
-	useEffect(() => {
-		fetch('http://127.0.0.1:8000/hackback/all')
-			.then((response) => response.json())
-			.then((data) => console.log(data))
-			.catch((error) => console.error(error));
-	}, []);
+	const Container = styled.div`
+		height: calc(100vh - 60px);
+		padding: 30px;
+		overflow: auto;
+		flex: 1;
+	`;
+
 	return (
-		<Switch>
-			<Route path='/tableData' component={TableData} />
-		</Switch>
+		<Container>
+			<Switch>
+				<Route path='/tableData' component={TableData} />
+				<Route path='/lineCharts' component={LineChartComponent} />
+				<Route path='/barCharts' component={BarChartComponent} />
+			</Switch>
+		</Container>
 	);
 }
 

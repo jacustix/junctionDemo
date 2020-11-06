@@ -25,7 +25,7 @@ def restaurants(request, number):
     else:
         list_of_restaurants = Restaurant.objects.exclude(name__exact="").order_by('name')[:number]
         data = serializers.serialize("json", list_of_restaurants)
-    return JsonResponse(data, safe=False)
+    return JsonResponse("{alma: 'Pisti'}", safe=False)
 
 
 def restaurants_json(request):
