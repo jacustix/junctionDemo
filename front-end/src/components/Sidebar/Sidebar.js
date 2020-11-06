@@ -159,7 +159,7 @@ function Sidebar() {
 					<Accordion.Collapse eventKey='1'>
 						<Card.Body>
 							<LinkContainer>
-								<NavLink to='/chart1' activeClassName='selected'>
+								<NavLink to='/forms' activeClassName='selected'>
 									Form with user inputs
 								</NavLink>
 							</LinkContainer>
