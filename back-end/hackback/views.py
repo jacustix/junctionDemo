@@ -1,33 +1,36 @@
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse, HttpResponseServerError
 from django.core import serializers
-from .models import Restaurant
+from .models import Restaurant, Userdata
+import json
 
 
 def index(request):
     return HttpResponse("Hello, welcome in our Junction backend system.")
 
 
-# def restaurants(request, number):
-#     maxi = Restaurant.objects.exclude(name__exact="").count()
-#     if number > maxi:
-#         return HttpResponse("There are no such many restaurants.")
-#     else:
-#         list_of_restaurants = Restaurant.objects.exclude(name__exact="").order_by('name')[:number]
-#         output = "<b>Alphabetically {} first restaurants:<br></b>".format(min(number, maxi))
-#         output += '<br>'.join([q.name for q in list_of_restaurants])
-#         return HttpResponse(output)
-
-
 def restaurants(request, number):
     maxi = Restaurant.objects.exclude(name__exact="").count()
     if number > maxi:
-        data = serializers.serialize("json", {})
+        return HttpResponse("There are no such many restaurants.")
     else:
         list_of_restaurants = Restaurant.objects.exclude(name__exact="").order_by('name')[:number]
         data = serializers.serialize("json", list_of_restaurants)
-    return JsonResponse("{alma: 'Pisti'}", safe=False)
+        return JsonResponse(data, safe=False)
 
 
 def restaurants_json(request):
     data = serializers.serialize("json", Restaurant.objects.all())
     return JsonResponse(data, safe=False)
+
+
+def save_user_data(request):
+    if request.method == 'POST':
+        json_data = json.loads(request.body)
+        # try:
+        #     data = json_data['data']
+        #     # Userdata.create(data)
+        # except KeyError:
+        #     HttpResponseServerError("Malformed data!")
+        HttpResponse("Got json data")
+    else:
+        HttpResponse("????????")
