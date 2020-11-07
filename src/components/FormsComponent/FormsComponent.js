@@ -6,6 +6,7 @@ function FormsComponent() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		console.log('something');
 	};
 
 	const textChange = (e) => {
