@@ -6,19 +6,6 @@ function FormsComponent() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		const dataComp = { text: text, number: number };
-		const url = 'http://127.0.0.1:8000/hackback/postuserdata';
-		const data = JSON.stringify(dataComp);
-		const otherParams = {
-			body: data,
-			method: 'POST',
-		};
-
-		fetch(url, otherParams)
-			.then((data) => {
-				console.log(data.json());
-			})
-			.catch((error) => console.log(error));
 	};
 
 	const textChange = (e) => {

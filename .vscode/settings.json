@@ -1,0 +1,11 @@
+{
+	"prettier.jsxSingleQuote": true,
+	"prettier.packageManager": "yarn",
+	"prettier.singleQuote": true,
+	"editor.tabSize": 2,
+	"prettier.tabWidth": 2,
+	"[javascript]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+}
