@@ -10,15 +10,14 @@ function FormsComponent() {
 		const url = 'http://127.0.0.1:8000/hackback/postuserdata';
 		const data = JSON.stringify(dataComp);
 		const otherParams = {
-			credentials: 'include',
 			body: data,
 			method: 'POST',
 		};
 
 		fetch(url, otherParams)
-			// .then((data) => {
-			// 	return data;
-			// })
+			.then((data) => {
+				console.log(data.json());
+			})
 			.catch((error) => console.log(error));
 	};
 

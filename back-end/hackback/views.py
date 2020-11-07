@@ -1,6 +1,7 @@
 from django.http import HttpResponse, JsonResponse, HttpResponseServerError
 from django.core import serializers
 from .models import Restaurant, Userdata
+from django.views.decorators.csrf import csrf_exempt
 import json
 
 
@@ -23,14 +24,18 @@ def restaurants_json(request):
     return JsonResponse(data, safe=False)
 
 
+@csrf_exempt
 def save_user_data(request):
+    print("******")
+    print(request.body)
     if request.method == 'POST':
-        json_data = json.loads(request.body)
+        # json_data = json.loads(request.body)
         # try:
         #     data = json_data['data']
         #     # Userdata.create(data)
         # except KeyError:
         #     HttpResponseServerError("Malformed data!")
-        HttpResponse("Got json data")
+        print("TTTTT")
+        return JsonResponse({"resp": "OK1"})
     else:
-        HttpResponse("????????")
+        return JsonResponse({"resp": "OK2"})
