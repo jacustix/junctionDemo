@@ -1,24 +1,34 @@
 {
   "files": {
-    "main.css": "/junctionDemo/static/css/main.8185e5e3.chunk.css",
-    "main.js": "/junctionDemo/static/js/main.0fa57530.chunk.js",
-    "main.js.map": "/junctionDemo/static/js/main.0fa57530.chunk.js.map",
+    "main.css": "/junctionDemo/static/css/main.6528a55c.chunk.css",
+    "main.js": "/junctionDemo/static/js/main.a06cc5d7.chunk.js",
+    "main.js.map": "/junctionDemo/static/js/main.a06cc5d7.chunk.js.map",
     "runtime-main.js": "/junctionDemo/static/js/runtime-main.f5ea5c28.js",
     "runtime-main.js.map": "/junctionDemo/static/js/runtime-main.f5ea5c28.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/junctionDemo/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.7bcf70ea.chunk.js": "/junctionDemo/static/js/2.7bcf70ea.chunk.js",
-    "static/js/2.7bcf70ea.chunk.js.map": "/junctionDemo/static/js/2.7bcf70ea.chunk.js.map",
+    "static/js/2.d09c0861.chunk.js": "/junctionDemo/static/js/2.d09c0861.chunk.js",
+    "static/js/2.d09c0861.chunk.js.map": "/junctionDemo/static/js/2.d09c0861.chunk.js.map",
     "index.html": "/junctionDemo/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/junctionDemo/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.8185e5e3.chunk.css.map": "/junctionDemo/static/css/main.8185e5e3.chunk.css.map",
-    "static/js/2.7bcf70ea.chunk.js.LICENSE.txt": "/junctionDemo/static/js/2.7bcf70ea.chunk.js.LICENSE.txt",
-    "static/media/logo.103b5fa1.svg": "/junctionDemo/static/media/logo.103b5fa1.svg"
+    "static/css/main.6528a55c.chunk.css.map": "/junctionDemo/static/css/main.6528a55c.chunk.css.map",
+    "static/js/2.d09c0861.chunk.js.LICENSE.txt": "/junctionDemo/static/js/2.d09c0861.chunk.js.LICENSE.txt",
+    "static/media/ablak-ikon.c7e99a30.svg": "/junctionDemo/static/media/ablak-ikon.c7e99a30.svg",
+    "static/media/add-icon.124938ec.svg": "/junctionDemo/static/media/add-icon.124938ec.svg",
+    "static/media/arrow-up.1954eb89.svg": "/junctionDemo/static/media/arrow-up.1954eb89.svg",
+    "static/media/arrow.4bb57432.svg": "/junctionDemo/static/media/arrow.4bb57432.svg",
+    "static/media/close.b261aa49.svg": "/junctionDemo/static/media/close.b261aa49.svg",
+    "static/media/futes-ikon.1e83f0d9.svg": "/junctionDemo/static/media/futes-ikon.1e83f0d9.svg",
+    "static/media/house.eb9e32e6.svg": "/junctionDemo/static/media/house.eb9e32e6.svg",
+    "static/media/legcserelo-ikon.f7100f50.svg": "/junctionDemo/static/media/legcserelo-ikon.f7100f50.svg",
+    "static/media/logo.103b5fa1.svg": "/junctionDemo/static/media/logo.103b5fa1.svg",
+    "static/media/napelem-ikon.903d140a.svg": "/junctionDemo/static/media/napelem-ikon.903d140a.svg",
+    "static/media/teto-ikon.d070a3cb.svg": "/junctionDemo/static/media/teto-ikon.d070a3cb.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f5ea5c28.js",
     "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.7bcf70ea.chunk.js",
-    "static/css/main.8185e5e3.chunk.css",
-    "static/js/main.0fa57530.chunk.js"
+    "static/js/2.d09c0861.chunk.js",
+    "static/css/main.6528a55c.chunk.css",
+    "static/js/main.a06cc5d7.chunk.js"
   ]
 }
