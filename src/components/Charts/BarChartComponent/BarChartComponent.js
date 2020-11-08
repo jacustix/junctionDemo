@@ -26,7 +26,7 @@ function BarChartComponent({ data }) {
 			value: data.ingatlanErtek,
 		},
 		{
-			name: 'Rate of return (year)(%)',
+			name: 'Rate of return (%)',
 			value: data.megterules,
 		},
 	];

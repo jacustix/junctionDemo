@@ -37,7 +37,7 @@ function Offers({ data }) {
 									<div>{item.rows[0].percent + '% ' + item.rows[0].text}</div>
 									<div>{item.rows[1].percent + '% ' + item.rows[1].text}</div>
 									<div>{item.rows[2].percent + '% ' + item.rows[2].text}</div>
-									<div>{item.rateOfReturn + ' year'}</div>
+									<div>{item.rateOfReturn}</div>
 								</div>
 							</div>
 						</div>
