@@ -9,6 +9,8 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: #657787;
+	font-size: 13px;
 }
 
 :root {
@@ -16,6 +18,7 @@ body {
 	--dark-bg-color: #0a1721;
 	--light-bg-color: #2a3a47;
 	--light-blue-color: #61dbfb;
+	--green-color: #27ae60;
 	--color-transition: color 0.3s;
 
 	--box-shadow: 3px 3px 16px black;

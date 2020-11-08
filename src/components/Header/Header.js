@@ -68,12 +68,12 @@ function Header() {
 				<Navbar.Brand>
 					<Link to='/'>
 						<LogoImage src={Logo} />
-						Brand Name
+						ecoRenovator
 					</Link>
 				</Navbar.Brand>
 				<UserInfo>
 					<FaUserCircle />
-					Koso Roland
+					Junction User
 				</UserInfo>
 			</Navbar>
 		</Container>

@@ -1,0 +1,63 @@
+.hint-box {
+	border-radius: 5px;
+	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+	position: absolute;
+	padding: 15px;
+	min-width: 250px;
+	z-index: 1;
+	transition: all 0.6s;
+}
+
+.hint-box .btn {
+	padding: 4px 9px;
+}
+
+.hint-box.disabled {
+	background-color: #d3d3d3;
+	box-shadow: none;
+}
+
+.hint-box.disabled * {
+	opacity: 0.75;
+}
+
+.hint-box .hint-header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+.hint-box .hint-header span {
+	margin-left: 16px;
+}
+
+.hint-box .button-container {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.hint-box .rows .percent {
+	color: var(--green-color);
+	font-weight: 500;
+	min-width: 48px;
+	display: inline-block;
+}
+
+.calcaulator-container {
+	position: relative;
+}
+
+.calcaulator-container .house-svg {
+	margin-left: 135px;
+	width: 700px;
+	height: 500px;
+	overflow: visible;
+	margin-left: 300px;
+}
+
+.selected-house-component {
+	opacity: 1;
+}
